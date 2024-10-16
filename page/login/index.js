@@ -14,6 +14,7 @@ document.querySelector(".btn").addEventListener("click", () => {
   // 1.3 基于 axios 调用验证码登录接口
   if (data.mobile.length !== 11) {
     myAlert(false, "手机号要11位");
+    return;
   }
   axios({
     url: "/v1_0/authorizations",
